@@ -17,8 +17,11 @@ public class Question {
 	@Id
 	private int questionId;
 	private String question;
-
-	@OneToMany(mappedBy = "question")
+    // By default we have LAZY loading but we not to change then we can write as EAGER loading
+	// LAZY loading simply menas when we are calling get data from session it will not fire query unit we have to 
+	// call method explicitly.
+	// EAGER loading simply means when we are calling get data from session then only it will fire query.
+	@OneToMany(mappedBy = "question" , fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Answer> answers;
 
 	public List<Answer> getAnswers() {
