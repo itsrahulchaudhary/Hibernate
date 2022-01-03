@@ -1,9 +1,12 @@
 package in.rahulit.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import ch.qos.logback.core.subst.Token.Type;
 
 @Entity
 @Table(name = "Question")
@@ -13,7 +16,7 @@ public class Question {
 	private int questionId;
 	private String question;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Answer answer;
 
 	public Answer getAnswer() {

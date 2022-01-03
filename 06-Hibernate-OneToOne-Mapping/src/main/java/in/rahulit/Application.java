@@ -37,7 +37,7 @@ public class Application {
 
 		Transaction txt = session.beginTransaction();
 		session.save(qn);
-		session.save(an);
+		//session.save(an);
 		txt.commit();
 		
 		// fetching data
