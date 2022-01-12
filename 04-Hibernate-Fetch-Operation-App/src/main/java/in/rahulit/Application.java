@@ -16,7 +16,7 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 		
-	    // get() , load()
+	        // get() , load()
 			System.out.println("Hibernate Project Started ::");
 			Configuration cfg = new Configuration();
 			cfg.configure("hibernate.cfg.xml");
@@ -24,7 +24,7 @@ public class Application {
 			Session session = factory.openSession();
 			
 			// get() method return null if object does not found
-			Student student = (Student) session.get(Student.class, 103);
+			Student student = (Student) session.get(Student.class, 102);
 			System.out.println(student);
 			
 			// load() method return Object not found exception if object does not found

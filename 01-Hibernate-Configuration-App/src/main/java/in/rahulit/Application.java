@@ -1,6 +1,5 @@
 package in.rahulit;
 
- 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.boot.SpringApplication;
